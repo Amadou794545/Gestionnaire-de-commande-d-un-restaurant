@@ -1,9 +1,79 @@
 [
   {
-    "id": 2,
-    "nom": "whopper",
+    "id": 1,
+    "nom": "plat1",
     "prix": "10",
-    "description": "voia",
+    "description": "Description du plat 1",
+    "categories": "PLAT"
+  },
+  {
+    "id": 2,
+    "nom": "plat2",
+    "prix": "15",
+    "description": "Description du plat 2",
+    "categories": "PLAT"
+  },
+  {
+    "id": 3,
+    "nom": "plat3",
+    "prix": "12",
+    "description": "Description du plat 3",
+    "categories": "PLAT"
+  },
+  {
+    "id": 4,
+    "nom": "plat4",
+    "prix": "8",
+    "description": "Description du plat 4",
+    "categories": "PLAT"
+  },
+  {
+    "id": 5,
+    "nom": "plat5",
+    "prix": "20",
+    "description": "Description du plat 5",
+    "categories": "PLAT"
+  },
+  {
+    "id": 6,
+    "nom": "plat6",
+    "prix": "18",
+    "description": "Description du plat 6",
+    "categories": "PLAT"
+  },
+  {
+    "id": 7,
+    "nom": "plat7",
+    "prix": "14",
+    "description": "Description du plat 7",
+    "categories": "PLAT"
+  },
+  {
+    "id": 8,
+    "nom": "plat8",
+    "prix": "16",
+    "description": "Description du plat 8",
+    "categories": "PLAT"
+  },
+  {
+    "id": 9,
+    "nom": "plat9",
+    "prix": "22",
+    "description": "Description du plat 9",
+    "categories": "PLAT"
+  },
+  {
+    "id": 10,
+    "nom": "plat10",
+    "prix": "25",
+    "description": "Description du plat 10",
+    "categories": "PLAT"
+  },
+  {
+    "id": 11,
+    "nom": "as",
+    "prix": "dd",
+    "description": "ef",
     "categories": "PLAT"
   }
 ]
