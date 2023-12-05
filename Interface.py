@@ -24,15 +24,12 @@ def interface():
             elif choix == 2:
                 client = Clients.Clients()
                 client.modifierClient()
-                print(client.display())
             elif choix == 3:
                 client = Clients.Clients()
                 client.supprimerClient()
-                print(client.display())
             elif choix == 4:
                 client = Clients.Clients()
                 client.displayUnClient()
-                print(client.display())
             elif choix == 5:
                 client = Clients.Clients()
                 print(client.displayAll())

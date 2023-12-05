@@ -48,6 +48,66 @@ class Clients:
             "phone": self.phone
         }
 
+    def modifierClient(self):
+        print("Modifier un client")
+        print(self.displayAll())
+        print("Qui voulez-vous modifier?")
+        self.displayAll()
+        choix = int(input("Choix: "))
+
+        client_a_modifier = None
+        for client in self.clients_list:
+            if client['id'] == choix:
+                client_a_modifier = client
+                break
+
+        if client_a_modifier:
+            client_a_modifier['nom'] = input("Nom: ")
+            client_a_modifier['prenom'] = input("Prenom: ")
+            client_a_modifier['phone'] = input("Phone: ")
+            print("Client modifié avec succès!")
+        else:
+            print("Choix invalide")
+
+        self.save_data()
+
+
+    def supprimerClient(self):
+        print("Supprimer un client")
+        print("Qui voulez-vous supprimer?")
+        self.displayAll()
+        choix = int(input("Choix: "))
+
+        client_a_supprimer = None
+        for client in self.clients_list:
+            if client['id'] == choix:
+                client_a_supprimer = client
+                break
+
+        if client_a_supprimer:
+            self.clients_list.remove(client_a_supprimer)
+            print("Client supprimé avec succès!")
+        else:
+            print("Choix invalide")
+
+        self.save_data()
+
+    def displayUnClient(self):
+        print("Afficher un client")
+        print("Qui voulez-vous afficher?")
+        self.displayAll()
+        choix = int(input("Choix: "))
+
+        client_a_afficher = None
+        for client in self.clients_list:
+            if client['id'] == choix:
+                client_a_afficher = client
+                break
+
+        if client_a_afficher:
+            print(f"Client: {client_a_afficher['nom']} Prenom:{client_a_afficher['prenom']} Phone: {client_a_afficher['phone']} ID: {client_a_afficher['id']}")
+        else:
+            print("Choix invalide")
 
 
     def save_to_json(self, filename):
