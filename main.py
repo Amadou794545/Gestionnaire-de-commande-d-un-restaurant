@@ -5,7 +5,7 @@ import Interface
 def main():
     # client.CréerClient()
     # print(client.display())
-    interface = Interface.interface()
+    interface = Interface.interfaceClient()
 
 
 main()

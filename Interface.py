@@ -1,8 +1,9 @@
 import Clients
+import Plats
 
 
 
-def menu():
+def menuClient():
     print("1. Créer un client")
     print("2. Modifier un client")
     print("3. Supprimer un client")
@@ -12,10 +13,10 @@ def menu():
     choix = int(input("Choix: "))
     return choix
 
-def interface():
+def interfaceClient():
         choix = 0
         while choix != 6:
-            choix = menu()
+            choix = menuClient()
             if choix == 1:
                 client = Clients.Clients()
                 client.CreerClient()
@@ -33,6 +34,42 @@ def interface():
             elif choix == 5:
                 client = Clients.Clients()
                 print(client.displayAll())
+            elif choix == 6:
+                print("Au revoir")
+            else:
+                print("Choix invalide")
+
+def menuPlat():
+    print("1. Créer un plat")
+    print("2. Modifier un plat")
+    print("3. Supprimer un plat")
+    print("4. Afficher un plat")
+    print("5. Afficher tous les plats")
+    print("6. Quitter")
+    choix = int(input("Choix: "))
+    return choix
+
+def interfacePlat():
+        choix = 0
+        while choix != 6:
+            choix = menuPlat()
+            if choix == 1:
+                plat = Plats.Plat()
+                plat.CreerPlat()
+                plat.save_to_json("plats.JSON")
+                print(plat.display())
+            elif choix == 2:
+                plat = Plats.Plat()
+                plat.modifierPlat()
+            elif choix == 3:
+                plat = Plats.Plat()
+                plat.supprimerPlat()
+            elif choix == 4:
+                plat = Plats.Plat()
+                plat.displayUnPlat()
+            elif choix == 5:
+                plat = Plats.Plat()
+                print(plat.displayAll())
             elif choix == 6:
                 print("Au revoir")
             else:
