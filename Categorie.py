@@ -2,6 +2,7 @@ from enum import Enum, auto
 
 
 class Categorie(Enum):
-    entrée = auto()
-    plat = auto()
-    dessert = auto()
+    ENTREE = auto()
+    PLAT = auto()
+    DESSERT = auto()
+

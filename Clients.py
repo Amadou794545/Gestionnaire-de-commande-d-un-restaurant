@@ -1,9 +1,9 @@
 import json
 
+
 class Clients:
     clients_list = []
 
-    clients_list = []
     latest_id = 0
 
     def __init__(self, nom="", prenom="", phone=""):
@@ -71,11 +71,10 @@ class Clients:
 
         self.save_data()
 
-
     def supprimerClient(self):
         print("Supprimer un client")
         print("Qui voulez-vous supprimer?")
-        self.displayAll()
+        print(self.displayAll())
         choix = int(input("Choix: "))
 
         client_a_supprimer = None
@@ -95,7 +94,7 @@ class Clients:
     def displayUnClient(self):
         print("Afficher un client")
         print("Qui voulez-vous afficher?")
-        self.displayAll()
+        print(self.displayAll())
         choix = int(input("Choix: "))
 
         client_a_afficher = None
@@ -105,10 +104,10 @@ class Clients:
                 break
 
         if client_a_afficher:
-            print(f"Client: {client_a_afficher['nom']} Prenom:{client_a_afficher['prenom']} Phone: {client_a_afficher['phone']} ID: {client_a_afficher['id']}")
+            print(
+                f"Client: {client_a_afficher['nom']} Prenom:{client_a_afficher['prenom']} Phone: {client_a_afficher['phone']} ID: {client_a_afficher['id']}")
         else:
             print("Choix invalide")
-
 
     def save_to_json(self, filename):
         with open(filename, "w") as json_file:
