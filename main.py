@@ -6,7 +6,7 @@ def main():
     # client.CréerClient()
     # print(client.display())
         #Interface.interfaceClient()
-        Interface.interfacePlat()
-
+      #  Interface.interfacePlat()
+        Interface.interfaceCommande()
 
 main()

@@ -127,3 +127,10 @@ class Clients:
         with open('clients.JSON') as mon_fichier:
             data = json.load(mon_fichier)
         return data
+
+    def clientExists(self, client_id):
+        # Vérifiez si l'ID client existe dans la liste des clients
+        for client in self.clients_list:
+            if client["id"] == client_id:
+                return True
+        return False

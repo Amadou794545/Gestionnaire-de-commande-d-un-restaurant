@@ -1,5 +1,6 @@
 import Clients
 import Plats
+import Commandes
 
 
 def menuClient():
@@ -72,6 +73,43 @@ def interfacePlat():
         elif choix == 5:
             plat = Plats.Plats()
             print(plat.displayAll())
+        elif choix == 6:
+            print("Au revoir")
+        else:
+            print("Choix invalide")
+
+
+def menuCommande():
+    print("1. Créer une commande")
+    print("2. Modifier une commande")
+    print("3. Supprimer une commande")
+    print("4. Afficher une commande")
+    print("5. Afficher toutes les commandeslist")
+    print("6. Quitter")
+    choix = int(input("Choix: "))
+    return choix
+
+def interfaceCommande():
+    choix = 0
+    while choix != 6:
+        choix = menuCommande()
+        if choix == 1:
+            commande = Commandes.Commandes()
+            commande.CreerCommande()
+            commande.save_to_json("commandeslist.json")
+            print(commande.display())
+        elif choix == 2:
+            commande = Commandes.Commandes()
+            commande.modifierCommande()
+        elif choix == 3:
+            commande = Commandes.Commandes()
+            commande.supprimerCommande()
+        elif choix == 4:
+            commande = Commandes.Commandes()
+            commande.displayUneCommande()
+        elif choix == 5:
+            commande = Commandes.Commandes()
+            print(commande.displayAll())
         elif choix == 6:
             print("Au revoir")
         else:

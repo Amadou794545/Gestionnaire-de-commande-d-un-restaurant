@@ -149,3 +149,10 @@ class Plats:
                 Plats.plats_list = json.load(json_file)
         except FileNotFoundError:
             print("File not found. No data loaded.")
+
+    def platExists(self, plat_id):
+        # Vérifiez si l'ID plat existe dans la liste des plats
+        for plat in self.plats_list:
+            if plat['id'] == plat_id:
+                return True
+        return False
