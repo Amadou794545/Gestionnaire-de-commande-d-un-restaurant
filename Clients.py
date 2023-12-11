@@ -36,7 +36,6 @@ class Clients:
         self.nom = input("Nom: ")
         self.prenom = input("Prenom: ")
         self.phone = input("Phone: ")
-
         Clients.clients_list.append(self.to_dict())
         self.save_data()  # Sauvegarde les données dans le fichier JSON
 
@@ -128,9 +127,12 @@ class Clients:
             data = json.load(mon_fichier)
         return data
 
-    def clientExists(self, client_id):
-        # Vérifiez si l'ID client existe dans la liste des clients
-        for client in self.clients_list:
-            if client["id"] == client_id:
-                return True
-        return False
+
+def nom(num):
+    client_a_afficher = None
+    for client in Clients.clients_list:
+        if client['id'] == num:
+            client_a_afficher = client
+            break
+    if client_a_afficher:
+        print(f"{client_a_afficher['nom']}")

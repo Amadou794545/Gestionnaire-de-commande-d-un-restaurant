@@ -1,2 +1,4 @@
-proleme de verification de ID dans le json de client pour associer a la commande
-idem pour les plat
+nomclient dans le json de la commande
+prix du repas dans le json de la commande
+total pour un client dans le json de la commande
+faire un systeme qui add les plats pour un seul client puis le total de sa commande

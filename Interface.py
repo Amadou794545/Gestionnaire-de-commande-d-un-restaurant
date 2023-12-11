@@ -97,20 +97,8 @@ def interfaceCommande():
             commande = Commandes.Commandes()
             commande.CreerCommande()
             commande.save_to_json("commandeslist.json")
-            print(commande.display())
+
         elif choix == 2:
-            commande = Commandes.Commandes()
-            commande.modifierCommande()
-        elif choix == 3:
-            commande = Commandes.Commandes()
-            commande.supprimerCommande()
-        elif choix == 4:
-            commande = Commandes.Commandes()
-            commande.displayUneCommande()
-        elif choix == 5:
-            commande = Commandes.Commandes()
-            print(commande.displayAll())
-        elif choix == 6:
             print("Au revoir")
         else:
             print("Choix invalide")
