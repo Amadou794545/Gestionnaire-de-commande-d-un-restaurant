@@ -54,23 +54,28 @@ class Plats:
 
     def CreerPlat(self):
         print("Créer un plat")
-        self.nom = input("Entrez le nom du plat: ")
-        self.prix = input("Entrez le prix du plat: ")
-        self.description = input("Entrez la description du plat: ")
-        print("Entrez la catégorie du plat: ")
-        print("1. Entrée")
-        print("2. Plat")
-        print("3. Dessert")
-        choix = int(input("Choix: "))
-        if choix == 1:
-            self.categories = Categorie.ENTREE
-        elif choix == 2:
-            self.categories = Categorie.PLAT
-        elif choix == 3:
-            self.categories = Categorie.DESSERT
-        else:
-            print("Choix invalide")
+        try:
+            self.nom = input("Entrez le nom du plat: ")
+            self.prix = input("Entrez le prix du plat: ")
+            self.description = input("Entrez la description du plat: ")
+            print("Entrez la catégorie du plat: ")
+            print("1. Entrée")
+            print("2. Plat")
+            print("3. Dessert")
+            choix = int(input("Choix: "))
+            if choix == 1:
+                self.categories = Categorie.ENTREE
+            elif choix == 2:
+                self.categories = Categorie.PLAT
+            elif choix == 3:
+                self.categories = Categorie.DESSERT
+            else:
+                raise ValueError("Choix invalide")
 
+            Plats.plats_list.append(self.to_dict())
+            self.save_data()
+        except ValueError as ve:
+            print(f"Error: {ve}")
         Plats.plats_list.append(self.to_dict())
         self.save_data()
 
