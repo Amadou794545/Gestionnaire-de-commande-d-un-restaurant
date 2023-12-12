@@ -139,20 +139,18 @@ class Plats:
         with open('plats.json') as mon_fichier:
             data = json.load(mon_fichier)
         return data
+
     def save_to_json(self, filename):
         with open(filename, "w") as json_file:
-            json.dump(Plats.plats_list, json_file, indent=2,default=self.serialize_enum)
+            json.dump(Plats.plats_list, json_file, indent=2, default=self.serialize_enum)
 
-    def load_from_json(self):
+    @staticmethod
+    def load_from_json(filename):
         try:
-            with open("plats.json", "r") as json_file:
-                Plats.plats_list = json.load(json_file)
+            with open(filename, "r") as json_file:
+                return json.load(json_file)
         except FileNotFoundError:
             print("File not found. No data loaded.")
+            return []
 
-    def platExists(self, plat_id):
-        # Vérifiez si l'ID plat existe dans la liste des plats
-        for plat in self.plats_list:
-            if plat['id'] == plat_id:
-                return True
-        return False
+

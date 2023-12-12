@@ -81,10 +81,7 @@ def interfacePlat():
 
 def menuCommande():
     print("1. Créer une commande")
-    print("2. Modifier une commande")
-    print("3. Supprimer une commande")
-    print("4. Afficher une commande")
-    print("5. Afficher toutes les commandeslist")
+    print("2. Afficher la facture")
     print("6. Quitter")
     choix = int(input("Choix: "))
     return choix
@@ -97,6 +94,9 @@ def interfaceCommande():
             commande = Commandes.Commandes()
             commande.CreerCommande()
             commande.save_to_json("commandeslist.json")
+        if choix == 2:
+            commande = Commandes.Commandes()
+            commande.displayFacture()
 
         elif choix == 2:
             print("Au revoir")

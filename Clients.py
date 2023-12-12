@@ -1,5 +1,7 @@
 import json
 
+from Plats import Plats
+
 
 class Clients:
     clients_list = []
@@ -112,10 +114,11 @@ class Clients:
         with open(filename, "w") as json_file:
             json.dump(Clients.clients_list, json_file, indent=2)
 
-    def load_from_json(self, filename):
+    @staticmethod
+    def load_from_json(filename):
         try:
             with open(filename, "r") as json_file:
-                Clients.clients_list = json.load(json_file)
+                return json.load(json_file)
         except FileNotFoundError:
             print("File not found. No data loaded.")
 
@@ -128,11 +131,6 @@ class Clients:
         return data
 
 
-def nom(num):
-    client_a_afficher = None
-    for client in Clients.clients_list:
-        if client['id'] == num:
-            client_a_afficher = client
-            break
-    if client_a_afficher:
-        print(f"{client_a_afficher['nom']}")
+
+
+

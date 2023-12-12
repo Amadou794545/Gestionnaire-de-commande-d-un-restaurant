@@ -1,4 +1,3 @@
-nomclient dans le json de la commande
-prix du repas dans le json de la commande
-total pour un client dans le json de la commande
-faire un systeme qui add les plats pour un seul client puis le total de sa commande
+terminer la classe Commande ,
+faire un total des prix d une commande pour la facture
+faire displayfatcure pour afficher l hiqtroique de la facture d un client
