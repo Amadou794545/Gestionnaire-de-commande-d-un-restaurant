@@ -1,3 +1,4 @@
-terminer la classe Commande ,
-faire un total des prix d une commande pour la facture
-faire displayfatcure pour afficher l hiqtroique de la facture d un client
+amelioration du projet :
+gestion des erreurs, gestion des exceptions
+meilleur interface graphique
+ajouter une bdd en sql

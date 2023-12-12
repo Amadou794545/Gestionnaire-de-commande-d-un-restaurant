@@ -89,6 +89,9 @@ class Commandes:
                     idplats2.append(plat['prix'])
                     break
 
+        # Convert idplats2 elements to integers
+        idplats2 = [int(price) for price in idplats2]
+
         # Check if the client or plat was not found
         if idclients1 == 0:
             raise ValueError(f"Client with id {self.idClient} not found in clients_data")
@@ -99,7 +102,8 @@ class Commandes:
             "NomClient": idclients,
             "idPlats": idplats,
             "NomPlats": idplats1,
-            "PrixPlats": idplats2
+            "PrixPlats": idplats2,
+            "Total": sum(idplats2)
         }
 
     def load_data(self):
@@ -140,21 +144,31 @@ class Commandes:
 
     def displayFacture(self):
         print("Afficher l'historique des commandes d'un client")
-        print(self.clients_instance.displayAll())
+        clients_data = self.clients_instance.displayAll()
+
+        # Display client details
+        print("Liste des clients:")
+        for client in clients_data:
+            print(f"ID: {client['id']}, Nom: {client['nom']}")
+
         print("Lequel voulez-vous afficher?")
         choix = int(input("Choix: "))
+
         commande_data = self.load_from_json("commandeslist.JSON")
 
-        commande_a_afficher = None
+        # Display command details for the chosen client
+        found_commandes = []
         for commande in commande_data:
             if commande['idClient'] == choix:
-                commande_a_afficher = commande
-                break
+                found_commandes.append(commande)
 
-        if commande_a_afficher is None:
+        if not found_commandes:
             print(f"Aucune commande trouvée pour le client avec l'ID {choix}.")
             return
 
-        print(f"ID: {commande_a_afficher['id']}, ID Client: {commande_a_afficher['idClient']}, ID Plats: {commande_a_afficher['idPlats']}")
-
-
+        print(f"\nCommandes pour le client avec l'ID {choix}:")
+        for commande_a_afficher in found_commandes:
+            prix_plats = [float(prix) for prix in commande_a_afficher['PrixPlats']]
+            total = sum(prix_plats)
+            print(
+                f"Name Plats: {commande_a_afficher['NomPlats']}, Prix: {commande_a_afficher['PrixPlats']}, Total: {total}")

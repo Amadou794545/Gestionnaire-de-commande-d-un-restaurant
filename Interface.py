@@ -9,14 +9,15 @@ def menuClient():
     print("3. Supprimer un client")
     print("4. Afficher un client")
     print("5. Afficher tous les clients")
-    print("6. Quitter")
+    print("6. Retour")
+    print("7. Quitter")
     choix = int(input("Choix: "))
     return choix
 
 
 def interfaceClient():
     choix = 0
-    while choix != 6:
+    while choix != 7:
         choix = menuClient()
         if choix == 1:
             client = Clients.Clients()
@@ -36,6 +37,8 @@ def interfaceClient():
             client = Clients.Clients()
             print(client.displayAll())
         elif choix == 6:
+            interfacePrincipal()
+        elif choix == 7:
             print("Au revoir")
         else:
             print("Choix invalide")
@@ -47,14 +50,15 @@ def menuPlat():
     print("3. Supprimer un plat")
     print("4. Afficher un plat")
     print("5. Afficher tous les plats")
-    print("6. Quitter")
+    print("6. Retour")
+    print("7. Quitter")
     choix = int(input("Choix: "))
     return choix
 
 
 def interfacePlat():
     choix = 0
-    while choix != 6:
+    while choix != 7:
         choix = menuPlat()
         if choix == 1:
             plat = Plats.Plats()
@@ -74,6 +78,8 @@ def interfacePlat():
             plat = Plats.Plats()
             print(plat.displayAll())
         elif choix == 6:
+            interfacePrincipal()
+        elif choix == 7:
             print("Au revoir")
         else:
             print("Choix invalide")
@@ -82,13 +88,14 @@ def interfacePlat():
 def menuCommande():
     print("1. Créer une commande")
     print("2. Afficher la facture")
-    print("6. Quitter")
+    print("3. Retour")
+    print("4. Quitter")
     choix = int(input("Choix: "))
     return choix
 
 def interfaceCommande():
     choix = 0
-    while choix != 6:
+    while choix != 4:
         choix = menuCommande()
         if choix == 1:
             commande = Commandes.Commandes()
@@ -97,8 +104,34 @@ def interfaceCommande():
         if choix == 2:
             commande = Commandes.Commandes()
             commande.displayFacture()
-
+        elif choix == 3:
+            interfacePrincipal()
         elif choix == 2:
+            print("Au revoir")
+        else:
+            print("Choix invalide")
+
+
+
+def menuPrincipal():
+    print("1. Gestion des clients")
+    print("2. Gestion des plats")
+    print("3. Gestion des commandes")
+    print("4. Quitter")
+    choix = int(input("Choix: "))
+    return choix
+
+def interfacePrincipal():
+    choix = 0
+    while choix != 4:
+        choix = menuPrincipal()
+        if choix == 1:
+            interfaceClient()
+        elif choix == 2:
+            interfacePlat()
+        elif choix == 3:
+            interfaceCommande()
+        elif choix == 4:
             print("Au revoir")
         else:
             print("Choix invalide")

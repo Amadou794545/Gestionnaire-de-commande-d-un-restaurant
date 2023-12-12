@@ -1,92 +1,14 @@
 [
   {
     "id": 1,
-    "nom": "maazia",
-    "prenom": "doums",
-    "phone": ""
+    "nom": "Mbodj",
+    "prenom": "Amadou",
+    "phone": "612108853"
   },
   {
     "id": 2,
-    "nom": "amadou",
-    "prenom": "mbodj",
-    "phone": "444"
-  },
-  {
-    "id": 3,
-    "nom": "xs",
-    "prenom": "xs",
-    "phone": "xs"
-  },
-  {
-    "id": 4,
-    "nom": "John",
-    "prenom": "Doe",
-    "phone": "555-1234"
-  },
-  {
-    "id": 5,
-    "nom": "Jane",
-    "prenom": "Smith",
-    "phone": "555-5678"
-  },
-  {
-    "id": 6,
-    "nom": "Alice",
-    "prenom": "Johnson",
-    "phone": "555-9876"
-  },
-  {
-    "id": 7,
-    "nom": "Bob",
-    "prenom": "Williams",
-    "phone": "555-4321"
-  },
-  {
-    "id": 8,
-    "nom": "Charlie",
-    "prenom": "Brown",
-    "phone": "555-8765"
-  },
-  {
-    "id": 9,
-    "nom": "David",
-    "prenom": "Davis",
-    "phone": "555-1111"
-  },
-  {
-    "id": 10,
-    "nom": "Eva",
-    "prenom": "Evans",
-    "phone": "555-2222"
-  },
-  {
-    "id": 11,
-    "nom": "Frank",
-    "prenom": "Franklin",
-    "phone": "555-3333"
-  },
-  {
-    "id": 12,
-    "nom": "Grace",
-    "prenom": "Green",
-    "phone": "555-4444"
-  },
-  {
-    "id": 13,
-    "nom": "Henry",
-    "prenom": "Harrison",
-    "phone": "555-5555"
-  },
-  {
-    "id": 14,
-    "nom": "Ivy",
-    "prenom": "Irving",
-    "phone": "555-6666"
-  },
-  {
-    "id": 15,
-    "nom": "Jack",
-    "prenom": "Johnson",
-    "phone": "555-7777"
+    "nom": "CHAD",
+    "prenom": "Yanis",
+    "phone": "1455142"
   }
 ]
