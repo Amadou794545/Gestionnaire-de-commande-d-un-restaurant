@@ -1,4 +1,42 @@
-amelioration du projet :
-gestion des erreurs, gestion des exceptions
-meilleur interface graphique
-ajouter une bdd en sql
+# Gestionnaire de Commande d'un Restaurant
+
+## Description
+Ce projet est une application de gestion des commandes d'un restaurant, permettant de simplifier la prise de commandes, la gestion des menus et le suivi des paiements.
+
+## Fonctionnalités
+- Gestion des menus (ajout, modification, suppression de plats)
+- Prise de commandes en temps réel
+- Gestion des stocks
+- Suivi des paiements et facturation
+- Interface utilisateur intuitive
+
+## Prérequis
+- Python 3.x
+- Bibliothèques : tkinter, pandas, json, sqlite3
+
+## Installation
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/Amadou794545/Gestionnaire-de-commande-d-un-restaurant.git
+   ```
+2. Accédez au dossier du projet :
+   ```bash
+   cd Gestionnaire-de-commande-d-un-restaurant
+   ```
+3. Installez les dépendances :
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Utilisation
+Exécutez l'application avec la commande suivante :
+```bash
+python main.py
+```
+
+## Auteurs
+- **Amadou794545** - [GitHub](https://github.com/Amadou794545)
+
+## Licence
+Ce projet est sous licence MIT.
+
